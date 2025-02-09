@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio ZF</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+
+<div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]
+dark:hidden">
+    <img src="./images2/header-bg-color.png" alt="" class="w-full">
+</div>
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex 
+    items-center justify-between z-50">
+        <img src="./images/logo.png" alt="Logo" class="w-60 cursor-pointer mr-14 dark:hidden">
+        <img src="./images/logowhite.png" alt="Logo" class="w-60 cursor-pointer mr-14 hidden dark:block">
+     
+    <ul class="hidden md:flex items-center gap-6 lg:gap-8
+    rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo
+    dark:border dark:border-white/50 dark:bg-transparent" >
+    <li><a href="#top">Accueil</a></li>
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Mes réalisations</a></li>
+    <li><a href="#contact">Contactez-moi</a></li>
+    
+    </ul>
+<div class="flex items-center gap-2">
+    <button onclick="toggleTheme()">
+        <img src="./images2/moon_icon.png" alt="Dark mode logo" class="w-7 dark:hidden">
+        <img src="./images2/sun_icon.png" alt="Dark mode logo" class="w-8 hidden dark:block">
+    </button>
+    <a href="#contact"
+    class="hidden lg:flex items-center gap-3 px-10 py-2.5 border
+    border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50">
+    Contact 
+    <img src="./images2/arrow-icon.png" alt="arrow" class="w-3 dark:hidden">
+    <img src="./images2/arrow-icon-dark.png" alt="arrow" class="w-3 hidden dark:block">
+</a>
+
+    <button class="block md:hidden ml-3" onclick="openMenu()">
+        <img src="./images2/menu-black.png" alt="" class="w-6 dark:hidden">
+        <img src="./images2/menu-white.png" alt="" class="w-6 hidden dark:block">
+    </button>
+
+<div>
+    <!-- Mobile Menu -->
+    <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 
+    bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover
+    dark:text-white">
+
+    <div class="absolute right-6 top-6" onclick="closeMenu()">
+        <img src="./images2/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
+        <img src="./images2/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
+
+    </div>
+    <li><a href="#top" onclick="closeMenu()">Accueil</a></li>
+    <li><a href="#about" onclick="closeMenu()">À propos</a></li>
+    <li><a href="#services" onclick="closeMenu()">Services</a></li>
+    <li><a href="#work" onclick="closeMenu()">Mes réalisations</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contactez-moi</a></li>
+    
+    </ul>
+</div>
+
+    
+</nav>
+<!-- --Header-- -->
+
+<div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col 
+items-center justify-center gap-4">
+    <img src="./images/profile-img.png" alt="" class="rounded-full w-32">
+    <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3 font-Ovo">Zohair Fettachi <img src="./images2/hand-icon.png" alt="" class="w-6"></h3>
+    <h1 class="text-3xl sm:text-6xl lg:tetx-[66px] font-Ovo">Développeur web full-stack passionné.</h1>
+    <p class="max-w-2xl mx-auto font-Ovo">basé à Paris.</p>
+
+    <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <a href="#contact" 
+        class="px-10 py-3 border rounded-full bg-gradient-to-r
+        from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2
+        dark:border-transparent">Contactez-moi
+        <img src="./images2/right-arrow-white.png" alt="" class="w-4">
+    </a>
+
+    <a href="./images/CV Alternance FETTACHI.pdf" download
+        class="px-10 py-3 border rounded-full border-gray-500 
+        bg-white flex items-center gap-2 dark:text-black">Mon CV
+        <img src="./images2/download-icon.png" alt="" class="w-4">
+    </a>
+        
+    </div>
+</div>
+
+<!-- --about me-- -->
+<div id="about" class="w-full px-[12%] py-10 scroll-m-28">
+    <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
+    <h2 class="text-center mb-2 text-5xl font-Ovo" >À propos</h2>
+
+    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+        <div class="max-w-max mx-auto relative">
+            <img src="./images/profile-img2.png" alt="" class="w-64 sm:w-80 rounded-3xl
+            max-w-none">
+            <div class="bg-white w-1/2 aspect-square absolute -right-8 -bottom-12
+            rounded-full translate-x-1/4 tranlslate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)]
+            flex items-center justify-center">
+            <img src="./images2/circular-text.png" alt="" class="w-full animate-spin_slow">
+            <img src="./images2/dev-icon.png" alt="" class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 
+            -translate-y-1/2">
+        </div>
+        </div>
+        <div class="flex-1">
+            <p class="mb-10 max-w-2xl font-Ovo">Après plusieurs années dans des secteurs variés, j’ai décidé de donner un nouveau souffle à ma carrière : Développeur Web. J’ai choisi de me former de manière autonome pour acquérir les connaissances nécessaires et rechercher une alternance. Mon objectif est de renforcer mes bases et d’acquérir une expérience solide dans ce domaine.</p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl" >
+                
+
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover 
+                hover:translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white
+                dark:hover:bg-darkHover">
+                    <img src="./images2/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                    <img src="./images2/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                    <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Parcours académique</h3>
+                    <p class="text-gray-600 text-sm dark:text-white/80">Université Évry Paris-Saclay
+                    </p>
+                </li>
+
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover 
+                hover:translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white
+                dark:hover:bg-darkHover">
+                    <img src="./images2/project-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                    <img src="./images2/project-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                    <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Projets</h3>
+                    <p class="text-gray-600 text-sm dark:text-white/80">E-commerce, météo, news, to-do list, portfolio, jeu de dés interactif...</p>
+                </li>
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover 
+                hover:translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white
+                dark:hover:bg-darkHover">
+                    <img src="./images2/code-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                    <img src="./images2/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block" >
+                    <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Hobbies
+
+                    </h3>
+                    <p class="text-gray-600 text-sm dark:text-white/80">Dessiner, faire du sport, se balader, sciences</p>
+                </li>
+                </li>
+            </ul> 
+            <h4 class="my-6 text-gray-700 font-Ovo dark:text-white/80">Outils que j'utilise</h4>
+            <ul class="flex items-center gap-3 sm:gap-5">
+
+                <li class="flex items-center justify-center w-12 sm:w-14
+                aspect-square boder border-gray-400 rounded-lg cursor cursor-pointer
+                hover:-translate-y-1 duration-500 ">
+                    <img src="./images2/vscode.png" alt="" class="w-5 sm:w-7">
+                </li>
+
+                <li class="flex items-center justify-center w-12 sm:w-14
+                aspect-square boder border-gray-400 rounded-lg cursor cursor-pointer
+                hover:-translate-y-1 duration-500">
+                    <img src="./images/git.png" alt="" class="w-5 sm:w-7">
+                </li>
+
+                <li class="flex items-center justify-center w-12 sm:w-14
+                aspect-square boder border-gray-400 rounded-lg cursor cursor-pointer
+                hover:-translate-y-1 duration-500">
+                    <img src="./images/postman.png" alt="" class="w-16 sm:w-16">
+                </li>
+
+                <li class="flex items-center justify-center w-12 sm:w-14
+                aspect-square boder border-gray-400 rounded-lg cursor cursor-pointer
+                hover:-translate-y-1 duration-500">
+                    <img src="./images/ps.png" alt="" class="w-5 sm:w-16">
+                </li>
+
+                <!-- <li class="flex items-center justify-center w-12 sm:w-14
+                aspect-square boder border-gray-400 rounded-lg cursor cursor-pointer
+                hover:-translate-y-1 duration-500">
+                    <img src="./images2/git.png" alt="" class="w-5 sm:w-7">
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ----Services---- -->
+<div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+<!-- <h4 class="text-center mb-2 text-lg font-Ovo">What i offer</h4> -->
+    <h2 class="text-center mb-2 text-5xl font-Ovo" >Compétences</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12" >quelques expériences de travail avec..</p>
+
+<div class="grid grid-cols-auto gap-6 my-10">
+    <div class="border border-gray-400 rounded-lg px-6 py-8 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+        <img src="./images2/web-icon.png" alt="" class="w-10">
+        <h3 class="text-lg my-4 text-gray-700 dark:text-white">Web Design</h3>
+        <ul class="text-sm text-gray-700 leading-5 dark:text-white/90 list-inside list-disc">
+            <li>React.js</li>
+            <li>Bootstrap 5</li>
+            <li>Tailwind</li>
+            <li>Javascript ES6</li>
+           
+         <li>HTML 5</li>
+            <li>CSS 3</li>
+        </ul>
+    </div>
+    
+    
+
+    <div class="border border-gray-400 rounded-lg px-6 py-8 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+        <img src="./images2/web-icon.png" alt="" class="w-10">
+        <h3 class="text-lg my-4 text-gray-700 dark:text-white">Back-End Development</h3>
+        <ul class="text-sm text-gray-700 leading-5 dark:text-white/90 list-inside list-disc">
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>EJS</li>
+            <li>REST</li>
+            <li>APIs</li>
+            <li>Authentication</li>
+        </ul>
+    </div>
+    
+
+    <div class="border border-gray-400 rounded-lg px-6 py-8 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+        <img src="./images2/web-icon.png" alt="" class="w-10">
+        <h3 class="text-lg my-4 text-gray-700 dark:text-white">Bases de données</h3>
+        <ul class="text-sm text-gray-700 leading-5 dark:text-white/90 list-inside list-disc">
+            <li>SQL</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+        </ul>
+    </div>
+    
+
+</div>
+</div>
+
+<!-- ----My work---- -->
+<div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg font-Ovo">Mon portfolio</h4>
+        <h2 class="text-center mb-2 text-5xl font-Ovo" >Mes derniers travaux</h2>
+        <!-- <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo" >Full-stack dev fom paris with some 
+            experiences working in ....</p> -->
+
+<div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
+    <div class="aspect-square bg-[url('./images/ec2.png')] bg-no-repeat bg-cover
+    bg-center rounded-lg relative cursor-pointer group">
+    
+    <!-- Popup Window (Initially Hidden) -->
+    <div id="popup1" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 1rem; border-radius: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3); width: 80%; max-width: 40rem; height: auto; overflow-y: auto; max-height: 80vh; text-align: center;">
+        <!-- Header with close button -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2 style="font-size: 1.5rem; font-weight: 600; flex: 1; margin: 0;">Site Web E-commerce Full Stack</h2>
+            <button id="closePopupBtn1" style="background: red; color: white; width: 2rem; height: 2rem; border-radius: 50%; border: none; cursor: pointer; font-size: 1.5rem; display: flex; align-items: center; justify-content: center;">×</button>
+        </div>
+        
+        <!-- Image as hyperlink -->
+        <a href="https://forever-ey47.onrender.com/" target="_blank" style="display: block; margin: 1rem 0;">
+            <img src="./images/Ecommerce.png" alt="Visit Website" style="max-width: 100%; border-radius: 0.75rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </a>
+    
+        <!-- Description Section -->
+        <div style="text-align: left; margin-top: 1rem; padding: 0 1rem;">
+            <h3 style="font-size: 1.2rem; font-weight: 600;">Description</h3>
+            <p style="font-size: 1rem; line-height: 1.6; color: #202020;">
+                Ce site e-commerce full-stack permet aux utilisateurs de parcourir les produits, de les filtrer et de les trier par catégorie ou prix, puis d’ajouter des articles à leur panier en sélectionnant des variantes comme la taille. Les utilisateurs peuvent créer un compte, se connecter et passer une commande en renseignant une adresse de livraison et en choisissant un mode de paiement : paiement à la livraison ou en ligne via Stripe et Razorpay.
+            </p>
+            <p style="font-size: 1rem; line-height: 1.6; color: #202020;">
+                Le <strong>panneau d’administration</strong> offre une gestion complète de la boutique. Les administrateurs peuvent ajouter, modifier et supprimer des produits, consulter et gérer les commandes des clients, ainsi qu’actualiser leur statut. Cela permet d’assurer une gestion efficace du magasin et des transactions. 
+            </p>
+        </div>
+        <div class="flex items-center justify-center gap-8" style="margin-top: 1rem;">
+            <img src="./images/React-icon.svg.png" alt="React Icon" style="width: 48px; height: 48px; object-fit: contain;">
+            <img src="./images/Tailwind_CSS_Logo.svg.png" alt="Tailwind CSS Icon" style="width: 48px; height: 48px; object-fit: contain;">
+            <img src="./images/nodejs-1-logo-png-transparent.png" alt="Node.js Icon" style="width: 78px; height: 78px; object-fit: contain;">
+            <img src="./images/800px-Mongodb.png" alt="MongoDB Icon" style="width: 140px; height: 140px; object-fit: contain;">
+        </div>
+               <!-- Technologies Section -->
+        <div style="text-align: left; max-height: 60vh; overflow-y: auto; padding: 1rem 0;">
+            <h3 style="font-size: 1.2rem; font-weight: 600;">Technologies utilisées</h3>
+            <ul style="list-style-type: none; padding: 0; font-size: 1rem; line-height: 1.6; color: #202020;">
+                <li><strong>React.js</strong>: Utilisé pour construire l'interface dynamique et réactive, avec une architecture basée sur les composants.</li>
+                <li><strong>Tailwind CSS</strong>: Utilisé pour le style de l'application avec une approche de CSS utilitaire, permettant un design réactif et personnalisable.</li>
+                <li><strong>React Toastify</strong>: Permet d'afficher des notifications (toast) pour informer l'utilisateur des actions réalisées.</li>
+                <li><strong>Node.js</strong>: Utilisé pour l'intégration backend et la gestion de la logique côté serveur.</li>
+                <li><strong>Express.js</strong>: Framework pour la création d'API backend et la gestion des routes.</li>
+                <li><strong>MongoDB</strong>: Base de données NoSQL pour stocker les données utilisateurs, produits et commandes.</li>
+                <li><strong>Stripe</strong>: Intégration du système de paiement en ligne.</li>
+                <li><strong>JWT (JSON Web Tokens)</strong>: Pour l'authentification des utilisateurs et la gestion des sessions.</li>
+                <li><strong>Bcrypt.js</strong>: Utilisé pour le hachage des mots de passe afin de garantir une authentification sécurisée.</li>
+                <li><strong>Vercel</strong>: Utilisé pour le déploiement du frontend de l'application.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Button to trigger the popup -->
+    <div id="popupBtn1" class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+        <div>
+            <h2 class="font-semibold">Projet Full-Stack</h2>
+            <p class="text-sm text-gray-700">Site Web E-commerce</p>
+        </div>
+        <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-gradient-to-r group-hover:from-pink-200 group-hover:to-pink-100">
+            <img src="./images2/send-icon.png" alt="" class="w-5">
+        </div>
+    </div>
+    
+    </div>
+    
+
+    <div class="aspect-square bg-[url('./images/news.png')] bg-no-repeat bg-cover
+    bg-center rounded-lg relative cursor-pointer group">
+    
+    <!-- Popup Window (Initially Hidden) -->
+    <div id="popup2" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 1rem; border-radius: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3); width: 80%; max-width: 40rem; height: auto; overflow-y: auto; max-height: 80vh; text-align: center;">
+        <!-- Header with close button -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2 style="font-size: 1.5rem; font-weight: 600; flex: 1; margin: 0;">FULL STACK E-commerce Website</h2>
+            <button id="closePopupBtn2" style="background: red; color: white; width: 2rem; height: 2rem; border-radius: 50%; border: none; cursor: pointer; font-size: 1.5rem; display: flex; align-items: center; justify-content: center;">×</button>
+        </div>
+        
+        <!-- Image as hyperlink -->
+        <a href="https://news-gilt-tau.vercel.app/" target="_blank" style="display: block; margin: 1rem 0;">
+            <img src="./images/news.png" alt="Visit Website" style="max-width: 100%; border-radius: 0.75rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </a>
+    
+        <!-- Description Section -->
+        <div style="text-align: left; margin-top: 1rem; padding: 0 1rem;">
+            <h3 style="font-size: 1.2rem; font-weight: 600;">Description</h3>
+            <p style="font-size: 1rem; line-height: 1.6; color: #202020;">
+                Ce projet consiste à créer une application React permettant aux utilisateurs de consulter les dernières nouvelles du monde entier, couvrant des catégories comme la technologie, les affaires, la santé, la science et le sport. L'application récupère les informations via l'API NewsAPI et les affiche dans une interface conviviale. Elle inclut un navbar interactif, des cartes d'articles avec des images et des descriptions, ainsi que la possibilité de filtrer les nouvelles par catégories. Les utilisateurs peuvent choisir parmi ces catégories pour accéder aux articles les plus récents et pertinents provenant de sources mondiales fiables.            </p>
+            <p style="font-size: 1rem; line-height: 1.6; color: #202020;">
+            </p>
+        </div>
+        <div class="flex items-center justify-center gap-8" style="margin-top: 1rem;">
+            <img src="./images/React-icon.svg.png" alt="React Icon" style="width: 78px; height: 78px; object-fit: contain;">
+            <img src="./images/bootstrap.png" alt="Tailwind CSS Icon" style="width: 78px; height: 78px; object-fit: contain;">
+            <img src="./images/css.png" alt="Node.js Icon" style="width: 78px; height: 78px; object-fit: contain;">
+            <img src="./images/api.png" alt="MongoDB Icon" style="width: 78px; height: 78px; object-fit: contain;">
+        </div>
+               <!-- Technologies Section -->
+        <div style="text-align: left; max-height: 60vh; overflow-y: auto; padding: 1rem 0;">
+            <h3 style="font-size: 1.2rem; font-weight: 600;">Technologies utilisées</h3>
+            <ul style="list-style-type: none; padding: 0; font-size: 1rem; line-height: 1.6; color: #202020;">
+                <li><strong>React</strong>: Bibliothèque JavaScript pour créer l'interface utilisateur dynamique et réactive.</li>
+<li><strong>NewsAPI</strong>: API utilisée pour récupérer les dernières actualités de sources mondiales fiables.</li>
+<li><strong>CSS</strong>: Langage de style pour personnaliser l'apparence et la mise en page de l'application.</li>
+<li><strong>Bootstrap</strong>: Framework CSS utilisé pour créer des interfaces réactives et modernes, avec des composants prêts à l'emploi pour une meilleure mise en page.</li>
+
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Button to trigger the popup -->
+    <div id="popupBtn2" class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+        <div>
+            <h2 class="font-semibold">Porjet Frontend</h2>
+            <p class="text-sm text-gray-700">News</p>
+        </div>
+        <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-gradient-to-r group-hover:from-pink-200 group-hover:to-pink-100">
+            <img src="./images2/send-icon.png" alt="" class="w-5">
+        </div>
+    </div>
+    
+    </div>
+
+<div class="aspect-square bg-[url('./images/weather.png')] bg-no-repeat bg-cover
+    bg-center rounded-lg relative cursor-pointer group">
+    
+    <!-- Popup Window (Initially Hidden) -->
+    <div id="popup3" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 1rem; border-radius: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3); width: 80%; max-width: 40rem; height: auto; overflow-y: auto; max-height: 80vh; text-align: center;">
+        <!-- Header with close button -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2 style="font-size: 1.5rem; font-weight: 600; flex: 1; margin: 0;">News</h2>
+            <button id="closePopupBtn3" style="background: red; color: white; width: 2rem; height: 2rem; border-radius: 50%; border: none; cursor: pointer; font-size: 1.5rem; display: flex; align-items: center; justify-content: center;">×</button>
+        </div>
+        
+        <!-- Image as hyperlink -->
+        <a href="https://zohairfettachi.github.io/Application-M-t-o/" target="_blank" style="display: block; margin: 1rem 0;">
+            <img src="./images/weather.png" alt="Visit Website" style="max-width: 100%; border-radius: 0.75rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </a>
+    
+        <!-- Description Section -->
+        <div style="text-align: left; margin-top: 1rem; padding: 0 1rem;">
+            <h3 style="font-size: 1.2rem; font-weight: 600;">Description</h3>
+            <p style="font-size: 1rem; line-height: 1.6; color: #202020;">
+                L'application récupère les données météo actuelles depuis l'API OpenWeatherMap et affiche des informations comme la température, les conditions météorologiques, l'humidité et la vitesse du vent en fonction de la ville saisie. Une barre de recherche permet à l'utilisateur d'entrer le nom de la ville et d'obtenir les informations météo correspondantes.            </p>
+            <p style="font-size: 1rem; line-height: 1.6; color: #202020;">
+            </p>
+        </div>
+        <div class="flex items-center justify-center gap-8" style="margin-top: 1rem;">
+            
+            <img src="./images/html.png" alt="React Icon" style="width: 78px; height: 78px; object-fit: contain;">
+            <img src="./images/css.png" alt="Tailwind CSS Icon" style="width: 78px; height: 78px; object-fit: contain;">
+            <img src="./images/js.png" alt="Node.js Icon" style="width: 78px; height: 78px; object-fit: contain;">
+            <img src="./images/openweathermap.png" alt="React Icon" style="width: 108px; height: 108px; object-fit: contain;">
+        </div>
+               <!-- Technologies Section -->
+        <div style="text-align: left; max-height: 60vh; overflow-y: auto; padding: 1rem 0;">
+            <h3 style="font-size: 1.2rem; font-weight: 600;">Technologies utilisées</h3>
+            <ul style="list-style-type: none; padding: 0; font-size: 1rem; line-height: 1.6; color: #202020;">
+                <li><strong>HTML</strong>: Utilisé pour la structure de la page web et du formulaire de recherche.</li>
+<li><strong>CSS</strong>: Utilisé pour le design et la mise en page de l'application, y compris l'affichage des informations météo.</li>
+<li><strong>JavaScript</strong>: Utilisé pour la logique de l'application, comme la gestion des requêtes API et l'affichage dynamique des données météo.</li>
+<li><strong>OpenWeatherMap API</strong>: Utilisé pour récupérer les données météorologiques en temps réel selon la ville saisie par l'utilisateur.</li>
+
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Button to trigger the popup -->
+    <div id="popupBtn3" class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+        <div>
+            <h2 class="font-semibold">Projet Frontend</h2>
+            <p class="text-sm text-gray-700">Application météo</p>
+        </div>
+        <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-gradient-to-r group-hover:from-pink-200 group-hover:to-pink-100">
+            <img src="./images2/send-icon.png" alt="" class="w-5">
+        </div>
+    </div>
+    
+    </div>
+
+    <div class="aspect-square bg-[url('./images/liste.png')] bg-no-repeat bg-cover
+    bg-center rounded-lg relative cursor-pointer group">
+    
+    <!-- Popup Window (Initially Hidden) -->
+    <div id="popup4" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 1rem; border-radius: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3); width: 80%; max-width: 40rem; height: auto; overflow-y: auto; max-height: 80vh; text-align: center;">
+        <!-- Header with close button -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2 style="font-size: 1.5rem; font-weight: 600; flex: 1; margin: 0;">Liste de tâches</h2>
+            <button id="closePopupBtn4" style="background: red; color: white; width: 2rem; height: 2rem; border-radius: 50%; border: none; cursor: pointer; font-size: 1.5rem; display: flex; align-items: center; justify-content: center;">×</button>
+        </div>
+        
+        <!-- Image as hyperlink -->
+        <a href="https://zohairfettachi.github.io/Liste-de-t-ches/" target="_blank" style="display: block; margin: 1rem 0;">
+            <img src="./images/liste.png" alt="Visit Website" style="max-width: 100%; border-radius: 0.75rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </a>
+    
+        <!-- Description Section -->
+        <div style="text-align: left; margin-top: 1rem; padding: 0 1rem;">
+            <h3 style="font-size: 1.2rem; font-weight: 600;">Description</h3>
+            <p style="font-size: 1rem; line-height: 1.6; color: #202020;">
+                Voici un projet pour créer une To-Do List avec HTML, CSS et JavaScript. Vous pourrez ajouter, marquer et supprimer des tâches, tout en utilisant le stockage local pour sauvegarder votre liste même après la fermeture du navigateur.            </p>
+            <p style="font-size: 1rem; line-height: 1.6; color: #202020;">
+            </p>
+        </div>
+        <div class="flex items-center justify-center gap-8" style="margin-top: 1rem;">
+            <img src="./images/html.png" alt="React Icon" style="width: 78px; height: 78px; object-fit: contain;">
+            <img src="./images/css.png" alt="Tailwind CSS Icon" style="width: 78px; height: 78px; object-fit: contain;">
+            <img src="./images/js.png" alt="Node.js Icon" style="width: 78px; height: 78px; object-fit: contain;">
+          
+        </div>
+               <!-- Technologies Section -->
+        <div style="text-align: left; max-height: 60vh; overflow-y: auto; padding: 1rem 0;">
+            <h3 style="font-size: 1.2rem; font-weight: 600;">Technologies utilisées</h3>
+            <ul style="list-style-type: none; padding: 0; font-size: 1rem; line-height: 1.6; color: #202020;">
+                <li><strong>HTML</strong>: Utilisé pour la structure de la page web.</li>
+                <li><strong>CSS</strong>: Utilisé pour le design et la mise en page de l'application.</li>
+                <li><strong>JavaScript</strong>: Utilisé pour la logique de l'application, comme l'ajout, la suppression et la mise à jour des tâches.</li>
+                <li><strong>Local Storage</strong>: Utilisé pour sauvegarder les tâches localement dans le navigateur, même après sa fermeture.</li>
+                <li><strong>DOM (Document Object Model)</strong>: Utilisé pour manipuler les éléments HTML (ajouter, supprimer, ou marquer des tâches).</li>
+                <li><strong>Event Listeners</strong>: Utilisés pour détecter les interactions de l'utilisateur, comme cliquer sur des tâches ou en ajouter de nouvelles.</li>
+                
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Button to trigger the popup -->
+    <div id="popupBtn4" class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+        <div>
+            <h2 class="font-semibold">Frontend project</h2>
+            <p class="text-sm text-gray-700">Liste de tâches</p>
+        </div>
+        <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-gradient-to-r group-hover:from-pink-200 group-hover:to-pink-100
+        ">
+            <img src="./images2/send-icon.png" alt="" class="w-5">
+        </div>
+    </div>
+    
+    </div>
+</div>
+
+
+<a href="#" class="w-max flex items-center justify-center gap-2 text-gray-700
+border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[#0080FF80]
+duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover">Voir plus
+
+<img src="./images2/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+<img src="./images2/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">
+</a>
+</div>
+
+<!-- -----Contact---- -->
+<div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images2/header-bg-color.png')] 
+bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
+    <h4 class="text-center mb-2 text-lg font-Ovo">Connectez-vous avec moi</h4>
+    <h2 class="text-center text-5xl font-Ovo">Prenez contact</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Bienvenue sur mon portfolio de développement web ! Explorez une sélection de projets mettant en avant mon expertise en développement full-stack.</p>
+
+        <form method="post" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto" >
+            <input type="hidden" name="access_key" value="71fda0b8-027f-4f61-959f-4cc9ee2f6d84">
+
+            <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+                <input type="text" placeholder="Enter your name" class="flex-1 p-3
+                outline-none border-[0.5px] border-gray-400 rounded-md bg-white
+                dark:bg-darkHover/30 dark:border-white/90" required name="name">
+
+                <input type="email" placeholder="Enter your email" class="flex-1 p-3
+                outline-none border-[0.5px] border-gray-400 rounded-md bg-white
+                dark:bg-darkHover/30 dark:border-white/90" required name="email">
+            </div>
+            <textarea rows="6" placeholder="Enter your message" class="w-full p-4
+            outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6
+            dark:bg-darkHover/30 dark:border-white/90" required name="message"></textarea>
+            <button class="py-3 px-8 w-max flex items-center justify-between
+            gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 
+            dark:bg-transparent dark:border-[0.5px] darkHover-bg-darkHover">Soumettre
+                <img src="./images2/right-arrow-white.png" class="w-4" alt="">
+            </button>
+        </form>
+</div>
+
+<!-- ----Footer---- -->
+ <div class="mt-20">
+<div class="text-center">
+    <img src="./images/logo.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
+    <img src="./images/logowhite.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+
+    <div class="w-max flex item center gap-2 mx-auto">
+        <img src="./images2/mail_icon.png" alt="" class="w-5 dark:hidden">
+        <img src="./images2/mail_icon_dark.png" alt="" class="w-5 hidden dark:block">
+zohairfettachi.info@gmail.com
+    </div>
+</div>
+<div class="text-center sm:flex items-center justify-between border-t
+border-gray-400 mx-[10%] mt-12 py-6">
+    <p>© 2025 Zohair Fettachi. All rights reserved.</p>
+    <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+        
+            
+        <li><a href="https://github.com/ZohairFettachi">GitHub</a></li>
+       <li><a href="https://fr.linkedin.com/in/zohair-fettachi">LinkedIn</a></li>
+            <!-- <li><a href="htpps://Twitter.com">Twitter</a></li> -->
+       
+    </ul>
+</div>
+ </div>
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
